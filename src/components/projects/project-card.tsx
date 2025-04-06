@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import React from "react";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 
@@ -35,8 +35,16 @@ export default function ProjectCard(props: ProjectCardProps) {
           <span className="text-sm font-semibold">{props.name}</span>
         </div>
         <div className="mt-3">
-          <p className="text-xs md:text-sm">{props.description}</p>
+          <p className="text-xs md:text-sm">
+            {props.description.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
         </div>
+
         <div className="mt-6 flex items-center justify-end gap-6">
           <a
             href={props.sourceCodeHref}

@@ -1,6 +1,10 @@
 import ContactButton from "@/components/contact-form/contact-button";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/icons";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import CallIcon from "@/public/icons/call-chat-svgrepo-com.svg";
+import Mail from "@/public/icons/mail-plus-svgrepo-com.svg";
+import Whatsapp from "@/public/icons/whatsapp-128-svgrepo-com.svg";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -11,25 +15,25 @@ export default function Footer() {
             Contact
           </span>
         </div>
-        <div className="flex flex-col sm:flex-row sm:space-x-8 lg:space-x-12">
+        <div className="flex flex-col sm:flex-row sm:space-x-8 lg:justify-between lg:space-x-12">
           <a
             href={`mailto:${siteMetadata.email}`}
             target="_blank"
             className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <span>mail@gmail.com</span>
+            <Mail width="100" height="100" />
           </a>
           <a
-            href={`mailto:${siteMetadata.email}`}
+            href={`tel:+91-6395100366`}
             className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <span>Call Me</span>
+            <CallIcon width="100" height="100" />
           </a>
           <a
-            href={`mailto:${siteMetadata.email}`}
+            href={"https://wa.me/916395100366"}
             className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <span>Whatsapp</span>
+            <Whatsapp width="100" height="100"></Whatsapp>
           </a>
         </div>
 
@@ -38,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center  md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
-        <span className="text-foreground">©2024 Arjun Kumar</span>
+        <span className="text-foreground">©2025 Arjun Kumar</span>
         <div className="flex gap-8">
           <a
             href={siteMetadata.github}

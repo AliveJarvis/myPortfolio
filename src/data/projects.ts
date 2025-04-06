@@ -41,10 +41,10 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     favicon: "/images/projects/logos/jsontree.ico",
     imageUrl: [
       "/images/projects/Quick Talk.png",
-      "/images/projects/Quick Talk.png",
+      "/images/projects/Quick Talk 2.png",
     ],
     description:
-      "Visualize JSON data format in form of a tree or graph. Application is made using Nextjs, Tailwindcss and Monaco Editor. Design image can be downloaded from this app.",
+      "🚀 Features Real-time Messaging: Chat instantly with friends or groups.\n User Authentication: Sign up and log in securely with your credentials. 🌐 Tech Stack Built using modern technologies for a sleek, fast, and responsive user experience:\n Frontend:\n Vite\nCSS3 / SCSS\nWebSockets |for real-time communication|\nBackend:\nNode.js\nExpress.js\nMongoDB |for storing messages and user data|",
     sourceCodeHref: "https://github.com/ArjunChaudhary4/quick-talk",
     liveWebsiteHref: "https://fullstack-chat-app-h3mi.onrender.com/",
   },
@@ -53,11 +53,12 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     favicon: "/images/projects/logos/kanban.ico",
     imageUrl: [
       "/images/projects/Power Extract Web.png",
-      "/images/projects/kanbanDark.webp",
-      "/images/projects/kanbanCardLight.webp",
+      "/images/projects/Power Extract (1).png",
+      "/images/projects/Power Extract (2).png",
+      "/images/projects/Power Extract (3).png",
     ],
     description:
-      "Keep track of projects and tasks in different categories. Drag and drop card from tables. Assign user and priority to task and many more features. This app is made using Reactjs, Typescript, Tailwindcss and React-beautiful-dnd library.",
+      "• I independently developed a high-performance, user-friendly site using TypeScript and Next.js. The director is impressed by the User Interface. I integrated Google Analytics for insights and hosted it on Firebase\n • I optimized the site for SEO consistently achieving a Lighthouse score of 390+ per page. Currently, the website attracts over 150 unique monthly potential clients with a good conversion ratio.",
     sourceCodeHref: "https://powerextract.co.nz/",
     liveWebsiteHref: "https://powerextract.co.nz/",
   },
@@ -65,14 +66,12 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "Mystery Message",
     favicon: "/images/projects/logos/manygames.ico",
     imageUrl: [
-      "/images/projects/manyGamesDark.webp",
-      "/images/projects/manyGamesLight.webp",
-      "/images/projects/manyGames2048.webp",
-      "/images/projects/manyGamesPuzzle.webp",
-      "/images/projects/manyGamesWordle.webp",
+      "/images/projects/Mystery Message (1).png",
+      "/images/projects/Mystery Message (2).png",
+      "/images/projects/Mystery Message (3).png",
     ],
     description:
-      "Many short and fun games using Reactjs, Typescript and Tailwindcss with collaboration with other developers",
+      "•Mystery Message is a web app where anyone can anonymously send a message to a verified user of the platform \n • Tech used- Next.js, Typescript, MongoDB, NextAuth, Zod, Shadcn, OpenAi Api , OTP verification.",
     sourceCodeHref: "https://github.com/ArjunChaudhary4/Mystery_Message",
     liveWebsiteHref: "https://mysterymessage-roan.vercel.app/",
   },
@@ -80,12 +79,13 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "Work Manager",
     favicon: "/images/projects/logos/covidtracker.ico",
     imageUrl: [
-      "/images/projects/covidTracker.webp",
-      "/images/projects/covidTrackerMap.webp",
-      "/images/projects/covidTrackerTable.webp",
+      "/images/projects/Work Manager (1).png",
+      "/images/projects/Work Manager (2).png",
+      "/images/projects/Work Manager (3).png",
+      "/images/projects/Work Manager (4).png",
     ],
     description:
-      "Get latest covid related stats in a table where user can filter using country and cases. It also has a map which show every countries data for quick view. It uses an open source api (disease.sh). Made using Reactjs, Javascript and MUI",
+      "• Work Manager is a web app built in Next.js and typescript for easily managing tasks.\n • It focuses on the User Interface as it loads the UI immediately and then changes the UI as the data is fetched, making the website too fast.",
     sourceCodeHref: "https://github.com/ArjunChaudhary4/Work-Manager",
     liveWebsiteHref: "https://workmanagerfirstbackendproject.vercel.app/",
   },
@@ -93,8 +93,9 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "My portfolio",
     favicon: "/favicon.ico",
     imageUrl: [
-      "/images/projects/portfolioDark.webp",
-      "/images/projects/portfolioLight.webp",
+      "/images/projects/myPortfolio (1).png",
+      "/images/projects/myPortfolio (2).png",
+      "/images/projects/myPortfolio (3).png",
     ],
     description:
       "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
