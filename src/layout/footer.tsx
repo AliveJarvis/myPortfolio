@@ -4,7 +4,6 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 import CallIcon from "@/public/icons/call-chat-svgrepo-com.svg";
 import Mail from "@/public/icons/mail-plus-svgrepo-com.svg";
 import Whatsapp from "@/public/icons/whatsapp-128-svgrepo-com.svg";
-import Image from "next/image";
 
 export default function Footer() {
   return (
