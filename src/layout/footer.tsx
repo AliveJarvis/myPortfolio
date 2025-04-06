@@ -12,26 +12,26 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-8 lg:space-x-12">
-  <a
-    href={`mailto:${siteMetadata.email}`}
-    target="_blank"
-    className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
-  >
-    <span>mail@gmail.com</span>
-  </a>
-  <a
-    href={`mailto:${siteMetadata.email}`}
-    className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
-  >
-    <span>Call Me</span>
-  </a>
-  <a
-    href={`mailto:${siteMetadata.email}`}
-    className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
-  >
-    <span>Whatsapp</span>
-  </a>
-</div>
+          <a
+            href={`mailto:${siteMetadata.email}`}
+            target="_blank"
+            className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+          >
+            <span>mail@gmail.com</span>
+          </a>
+          <a
+            href={`mailto:${siteMetadata.email}`}
+            className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+          >
+            <span>Call Me</span>
+          </a>
+          <a
+            href={`mailto:${siteMetadata.email}`}
+            className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+          >
+            <span>Whatsapp</span>
+          </a>
+        </div>
 
         <div className="flex justify-center">
           <ContactButton />

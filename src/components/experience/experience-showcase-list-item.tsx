@@ -2,7 +2,6 @@ import { RefObject, useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
 
-
 export interface ExperienceListIconProps {
   iconRef: RefObject<HTMLElement>;
 }
@@ -52,36 +51,37 @@ export default function ExperienceShowcaseListItem(
   props: ExperienceShowcaseListItemProps,
 ) {
   const ref = useRef(null);
-  return (<>
-    <li ref={ref} className="mx-auto mb-14 flex w-[60%] flex-col gap-1">
-      <ShowCaseLiIcon iconRef={ref} />
-      <motion.div
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{
-          type: "spring",
-          duration: 0.4,
-        }}
-      >
-        <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
-          {props.title}{" "}
-          <Link
-            href={props.organisation.href}
-            className="cursor-pointer text-accent"
-            target="_blank"
-            rel="nofollow"
-          >
-            @{props.organisation.name}
-          </Link>
-        </h3>
-        <span className="text-sm font-medium text-foreground xs:text-base">
-          {props.date} | {props.location}
-        </span>
-        <p className="text-sm font-medium text-muted-foreground xs:text-base">
-          {props.description}
-        </p>
-      </motion.div>
-    </li>
+  return (
+    <>
+      <li ref={ref} className="mx-auto mb-14 flex w-[60%] flex-col gap-1">
+        <ShowCaseLiIcon iconRef={ref} />
+        <motion.div
+          initial={{ y: 50 }}
+          whileInView={{ y: 0 }}
+          transition={{
+            type: "spring",
+            duration: 0.4,
+          }}
+        >
+          <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
+            {props.title}{" "}
+            <Link
+              href={props.organisation.href}
+              className="cursor-pointer text-accent"
+              target="_blank"
+              rel="nofollow"
+            >
+              @{props.organisation.name}
+            </Link>
+          </h3>
+          <span className="text-sm font-medium text-foreground xs:text-base">
+            {props.date} | {props.location}
+          </span>
+          <p className="text-sm font-medium text-muted-foreground xs:text-base">
+            {props.description}
+          </p>
+        </motion.div>
+      </li>
     </>
   );
 }

@@ -17,5 +17,5 @@ export const siteMetadata = {
   twitter: "",
   linkedin: "https://www.linkedin.com/in/arjunbiznishub",
   locale: "en-US",
-  // googleSiteVerification: "_YJlO90eSoye2AQOhbkRAzNbejzCGiTgAD4RNR3NtHc",
+  googleSiteVerification: "",
 };

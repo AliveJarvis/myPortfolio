@@ -38,7 +38,7 @@ export default function ExperienceShowcaseList(
             <React.Fragment key={index}>
               <ExperienceShowcaseListItem {...details} />
               {details.title === "Front End Engineer" && (
-                <div className="flex justify-center mb-20">
+                <div className="mb-20 flex justify-center">
                   <Image src={Certificate} alt="" width={400}></Image>
                 </div>
               )}

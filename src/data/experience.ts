@@ -9,7 +9,8 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     },
     date: "March 2024 - May-2024",
     location: "New Zealand | Remote",
-    description: "In my remote internship with Power Extract, a New Zealand-based company, I independently developed a high-performance, user-friendly site using TypeScript and Next.js. I integrated Google Analytics for insights, optimized the site for SEO, and hosted it on Firebase, consistently achieving a Lighthouse score of 390+ per page and attracting over 150 unique monthly visitors. ",
+    description:
+      "In my remote internship with Power Extract, a New Zealand-based company, I independently developed a high-performance, user-friendly site using TypeScript and Next.js. I integrated Google Analytics for insights, optimized the site for SEO, and hosted it on Firebase, consistently achieving a Lighthouse score of 390+ per page and attracting over 150 unique monthly visitors. ",
   },
   {
     title: "Fundamentals of Digital Marketing",
