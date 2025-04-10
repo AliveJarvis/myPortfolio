@@ -14,7 +14,7 @@ export const siteMetadata = {
   socialBanner: "",
   email: "foundersfactree@gmail.com",
   github: "https://github.com/ArjunChaudhary4",
-  twitter: "",
+  twitter: "https://x.com/Alive_Jarvis",
   linkedin: "https://www.linkedin.com/in/arjunbiznishub",
   locale: "en-US",
   googleSiteVerification: "",

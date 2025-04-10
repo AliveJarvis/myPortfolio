@@ -14,25 +14,25 @@ export default function Footer() {
             Contact
           </span>
         </div>
-        <div className="flex flex-col sm:flex-row sm:space-x-8 lg:justify-between lg:space-x-12">
+        <div className="flex w-full flex-row sm:space-x-8 lg:justify-between lg:space-x-12">
           <a
             href={`mailto:${siteMetadata.email}`}
             target="_blank"
             className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <Mail width="100" height="100" />
+            <Mail width="100" height="100" className="sm:w-100 sm:h-100" />
           </a>
           <a
             href={`tel:+91-6395100366`}
             className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <CallIcon width="100" height="100" />
+            <CallIcon width="100" height="100" className="sm:w-100 sm:h-100" />
           </a>
           <a
             href={"https://wa.me/916395100366"}
             className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <Whatsapp width="100" height="100"></Whatsapp>
+            <Whatsapp width="100" height="100" className="sm:w-100 sm:h-100" />
           </a>
         </div>
 
