@@ -41,7 +41,7 @@ import googleFirebase from "@/public/icons/google-firebase.svg";
 import SEO from "@/public/icons/seo.svg";
 import PostmanSvg from "@/public/icons/postman.svg";
 import tagManager from "@/public/icons/google-tag-manager-svgrepo-com.svg";
-import searchConsole from "@/public/icons/googlesearchconsole-svgrepo-com.svg"
+import searchConsole from "@/public/icons/googlesearchconsole-svgrepo-com.svg";
 import github from "@/public/icons/github.svg";
 import analytics from "@/public/icons/google-analytics-svgrepo-com.svg";
 

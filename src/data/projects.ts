@@ -7,7 +7,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     index: 0,
     title: "Quick Talk",
     href: "https://fullstack-chat-app-h3mi.onrender.com/",
-    tags: ["Socket.io" , "Express.js", "MonogoDb" , "UserAuthentication"],
+    tags: ["Socket.io", "Express.js", "MonogoDb", "UserAuthentication"],
     image: {
       LIGHT: "/images/projects/Quick Talk.png",
       DARK: "/images/projects/Quick Talk.png",

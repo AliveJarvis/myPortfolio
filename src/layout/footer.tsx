@@ -14,25 +14,26 @@ export default function Footer() {
             Contact
           </span>
         </div>
-        <div className="flex w-full flex-row sm:space-x-8 lg:justify-between lg:space-x-12 items-center justify-center ">
+
+        <div className="flex w-full flex-col items-center justify-center sm:flex-row sm:space-x-8 sm:space-y-6 lg:justify-between lg:space-x-12 lg:space-y-0">
           <a
             href={`mailto:${siteMetadata.email}`}
             target="_blank"
-            className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+            className=" cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <Mail className="w-20 h-20 sm:w-100 sm:h-100 m-10" />
+            <Mail className="sm:w-100 sm:h-100 m-10 h-20 w-20" />
           </a>
           <a
             href={`tel:+91-6395100366`}
-            className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+            className=" cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <CallIcon className="w-20 h-20 sm:w-100 sm:h-100 m-10" />
+            <CallIcon className="sm:w-100 sm:h-100 m-10 h-20 w-20" />
           </a>
           <a
             href={"https://wa.me/916395100366"}
-            className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
+            className=" cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
           >
-            <Whatsapp className="w-20 h-20 sm:w-100 sm:h-100 m-10" />
+            <Whatsapp className="sm:w-100 sm:h-100 m-10 h-20 w-20" />
           </a>
         </div>
 
