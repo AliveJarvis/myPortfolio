@@ -50,6 +50,7 @@ export default function ContactFormModal({
               ? "Rate Limiter: Only 5 email per hour"
               : "Oop! Unable to send email",
         });
+        console.log(response);
       }
     } catch {
       setToastState({

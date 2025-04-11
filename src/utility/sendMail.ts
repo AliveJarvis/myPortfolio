@@ -10,6 +10,7 @@ export const sendMail = async function (
   const pass = process.env.NODEMAILER_PASS;
 
   if (!user && !pass) {
+    console.error("Missing nodemailer credentials"); // Debug log
     return new Promise((resolve) =>
       resolve({ status: 500, message: "Internal server error" }),
     );
@@ -26,14 +27,14 @@ export const sendMail = async function (
   const mailOptions = {
     from: process.env.NODEMAILER_USER,
     to: process.env.NODEMAILER_USER,
-    subject: "Portfolio: [" + subject + " ]",
+    subject: "Portfolio Website: [" + subject + " ]",
     text: `${name}: <${email}>\n${message}`,
   };
 
   return new Promise((resolve) => {
     transporter.sendMail(mailOptions, (error) => {
       if (error) {
-        resolve({ status: 500, message: "Failed to send mail" });
+        resolve({ status: 500, message: `Failed to send mail ${error}` });
       } else {
         resolve({ status: 200, message: "Mail send successfully" });
       }

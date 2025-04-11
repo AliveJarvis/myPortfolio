@@ -30,7 +30,7 @@ import ViteSvg from "@/public/icons/vite.svg";
 
 // Backend
 import NodejsSvg from "@/public/icons/nodejs.svg";
-
+import Webrtc from "@/public/icons/web-rtc-svgrepo-com.svg";
 // Database and ORMS
 import MongoDBSvg from "@/public/icons/mongodb.svg";
 import PostgressSvg from "@/public/icons/postgresql.svg";
@@ -40,6 +40,10 @@ import GitSvg from "@/public/icons/git.svg";
 import googleFirebase from "@/public/icons/google-firebase.svg";
 import SEO from "@/public/icons/seo.svg";
 import PostmanSvg from "@/public/icons/postman.svg";
+import tagManager from "@/public/icons/google-tag-manager-svgrepo-com.svg";
+import searchConsole from "@/public/icons/googlesearchconsole-svgrepo-com.svg"
+import github from "@/public/icons/github.svg";
+import analytics from "@/public/icons/google-analytics-svgrepo-com.svg";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -115,6 +119,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "Socket.io",
         icon: SiSocketdotio,
       },
+      {
+        name: "Webrtc",
+        icon: Webrtc,
+      },
     ],
   },
   {
@@ -148,6 +156,22 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "SEO",
         icon: SEO,
+      },
+      {
+        name: "Tag Manager",
+        icon: tagManager,
+      },
+      {
+        name: "Search Console",
+        icon: searchConsole,
+      },
+      {
+        name: "Github",
+        icon: github,
+      },
+      {
+        name: "Google Analytics",
+        icon: analytics,
       },
     ],
   },

@@ -81,14 +81,14 @@ const handler = async (
     res.status(response.status).send(response);
   } catch (error: any) {
     if (error?.status === 429) {
-      res.status(429).json({ status: 429, message: "Rate limit exceeded" });
+      res.status(429).json({ status: 429, message: error });
     } else {
       res.status(error.status || 500).json({
         status: error.status || 500,
-        message: error.message || "Internal server error",
+        message: error,
       });
     }
   }
-};
+};  
 
 export default handler;
