@@ -1,14 +1,10 @@
 import {
   SiExpress,
   SiSocketdotio,
-  // SiPrisma,
   SiNextdotjs,
-  // SiFlask,
 } from "react-icons/si";
 import {
   FramerMotionIcon,
-  // ReactRouterDomIcon,
-  // VitePwaIcon,
 } from "@/components/icons";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
@@ -19,31 +15,37 @@ import Cprogramming from "@/public/icons/c-programming.svg";
 import JavascriptSvg from "@/public/icons/javascript.svg";
 import TypescriptSvg from "@/public/icons/typescript.svg";
 import PythonSvg from "@/public/icons/python.svg";
+import shell from "@/public/icons/shell.svg";
 
 // Libraries
 import ReactjsSvg from "@/public/icons/reactjs.svg";
-// import SolidjsSvg from "@/public/icons/solidjs.svg";
-// import ReduxSvg from "@/public/icons/redux.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-import MuiSvg from "@/public/icons/mui.svg";
 import ViteSvg from "@/public/icons/vite.svg";
+import expo from "@/public/icons/expo-native.svg";
 
 // Backend
 import NodejsSvg from "@/public/icons/nodejs.svg";
 import Webrtc from "@/public/icons/web-rtc-svgrepo-com.svg";
+import RestAPI from "@/public/icons/restful-api.svg";
+
+
 // Database and ORMS
 import MongoDBSvg from "@/public/icons/mongodb.svg";
 import PostgressSvg from "@/public/icons/postgresql.svg";
 
 // Tools and Tech
-import GitSvg from "@/public/icons/git.svg";
 import googleFirebase from "@/public/icons/google-firebase.svg";
 import SEO from "@/public/icons/seo.svg";
-import PostmanSvg from "@/public/icons/postman.svg";
 import tagManager from "@/public/icons/google-tag-manager-svgrepo-com.svg";
 import searchConsole from "@/public/icons/googlesearchconsole-svgrepo-com.svg";
 import github from "@/public/icons/github.svg";
 import analytics from "@/public/icons/google-analytics-svgrepo-com.svg";
+
+// DevOps and Cloud
+import DockerSvg from "@/public/icons/docker.svg";
+import AWS from "@/public/icons/aws.svg";
+import TerraformSvg from "@/public/icons/terraform-16-svgrepo-com.svg";
+import CICD from "@/public/icons/ci-cd-svgrepo-com.svg";
+
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -73,6 +75,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "C",
         icon: Cprogramming,
       },
+      {
+        name: "Shell",
+        icon: shell,
+      },
     ],
   },
   {
@@ -87,20 +93,16 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         icon: SiNextdotjs,
       },
       {
-        name: "Tailwindcss",
-        icon: TailwindcssSvg,
-      },
-      {
-        name: "MUI",
-        icon: MuiSvg,
-      },
-      {
         name: "Framer motion",
         icon: FramerMotionIcon,
       },
       {
         name: "Vite",
         icon: ViteSvg,
+      },
+      {
+        name: "React Native",
+        icon: expo,
       },
     ],
   },
@@ -123,6 +125,10 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "Webrtc",
         icon: Webrtc,
       },
+      {
+        name: "Restful API's",
+        icon: RestAPI,
+      },
     ],
   },
   {
@@ -139,16 +145,29 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     ],
   },
   {
-    sectionName: "Tools and Technologies",
+    sectionName: "DevOps and Cloud",
     skills: [
       {
-        name: "Git",
-        icon: GitSvg,
+        name: "AWS",
+        icon: AWS,
       },
       {
-        name: "Postman",
-        icon: PostmanSvg,
+        name: "Docker",
+        icon: DockerSvg,
       },
+      {
+        name: "CI/CD Pipelines",
+        icon: CICD,
+      },
+      {
+        name: "Terraform,",
+        icon: TerraformSvg,
+      },
+    ],
+  },
+  {
+    sectionName: "Tools and Technologies",
+    skills: [
       {
         name: "Firebase",
         icon: googleFirebase,

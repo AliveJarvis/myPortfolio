@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation"; // <- use this in app router
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 import FadeUp from "@/animation/fade-up";
 
@@ -76,6 +77,15 @@ export default function LandingHero() {
               Check my experience
             </span>
           </button>
+          <Link href={'https://arjun-portfolio-japan.vercel.app/'}>
+          <button
+            className="group pointer-events-auto relative m-4 mb-2 me-2 mt-4 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-green-400 to-blue-600 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-green-200 group-hover:from-green-400 group-hover:to-blue-600 dark:text-white dark:focus:ring-green-800"
+          >
+            <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">
+            日本語版ポートフォリオはこちら
+            </span>
+          </button>
+          </Link>
         </div>
       </div>
     </motion.section>

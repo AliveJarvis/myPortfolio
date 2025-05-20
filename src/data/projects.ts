@@ -102,4 +102,17 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     sourceCodeHref: "https://github.com/ArjunChaudhary4/myPortfolio",
     // liveWebsiteHref: siteMetadata.siteUrl,
   },
+  {
+    name: "Mini CRM",
+    favicon: "/favicon.ico",
+    imageUrl: [
+      "/images/projects/Mini CRM (1).png",
+      "/images/projects/Mini CRM (2).png",
+      "/images/projects/Mini CRM (3).png",
+    ],
+    description:
+      "Tech Used: \n•	Gemini API integration •	NextJs •	ioredis •	updates Databases in batches ",
+    sourceCodeHref: "https://github.com/AliveJarvis/arjunxenocrm",
+    liveWebsiteHref: "https://arjunxenocrm-6ogq.vercel.app/",
+  },
 ];

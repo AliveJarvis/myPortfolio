@@ -13,7 +13,7 @@ export const siteMetadata = {
   twitterImage: "",
   socialBanner: "",
   email: "foundersfactree@gmail.com",
-  github: "https://github.com/ArjunChaudhary4",
+  github: "https://github.com/AliveJarvis",
   twitter: "https://x.com/Alive_Jarvis",
   linkedin: "https://www.linkedin.com/in/arjunbiznishub",
   locale: "en-US",
