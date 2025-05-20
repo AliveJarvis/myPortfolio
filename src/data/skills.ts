@@ -1,11 +1,5 @@
-import {
-  SiExpress,
-  SiSocketdotio,
-  SiNextdotjs,
-} from "react-icons/si";
-import {
-  FramerMotionIcon,
-} from "@/components/icons";
+import { SiExpress, SiSocketdotio, SiNextdotjs } from "react-icons/si";
+import { FramerMotionIcon } from "@/components/icons";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 // Languages
@@ -27,7 +21,6 @@ import NodejsSvg from "@/public/icons/nodejs.svg";
 import Webrtc from "@/public/icons/web-rtc-svgrepo-com.svg";
 import RestAPI from "@/public/icons/restful-api.svg";
 
-
 // Database and ORMS
 import MongoDBSvg from "@/public/icons/mongodb.svg";
 import PostgressSvg from "@/public/icons/postgresql.svg";
@@ -45,7 +38,6 @@ import DockerSvg from "@/public/icons/docker.svg";
 import AWS from "@/public/icons/aws.svg";
 import TerraformSvg from "@/public/icons/terraform-16-svgrepo-com.svg";
 import CICD from "@/public/icons/ci-cd-svgrepo-com.svg";
-
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
