@@ -9,10 +9,10 @@ export const sendMail = async function (
   const user = process.env.NODEMAILER_USER;
   const pass = process.env.NODEMAILER_PASS;
 
-  if (!user && !pass) {
+  if (!user || !pass) {
     console.error("Missing nodemailer credentials"); // Debug log
     return new Promise((resolve) =>
-      resolve({ status: 500, message: "Internal server error" }),
+      resolve({ status: 503, message: "Internal server error" }),
     );
   }
 

@@ -18,7 +18,7 @@ export type ContactFormValues = Yup.InferType<typeof mailValidationSchema>;
 export type FormFields = {
   name: keyof ContactFormValues;
   label: string;
-  type: "text";
+  type: "text" | "email";
   fieldType: "text" | "textarea";
   placeholder: string;
 };
@@ -27,7 +27,7 @@ const FormFieldsData: FormFields[] = [
   {
     name: "email",
     label: "Email",
-    type: "text",
+    type: "email",
     fieldType: "text",
     placeholder: "Email",
   },
@@ -85,7 +85,7 @@ export default function ContactForm({
               <div>
                 <label
                   htmlFor={form.name}
-                  className="inline font-medium text-background"
+                  className="inline font-medium text-foreground"
                 >
                   {form.label}
                 </label>
@@ -98,12 +98,25 @@ export default function ContactForm({
                         <CustomInput
                           id={form.name}
                           {...field}
+                          aria-invalid={Boolean(meta.touched && meta.error)}
+                          aria-describedby={
+                            meta.touched && meta.error
+                              ? form.name + "-error"
+                              : undefined
+                          }
                           type={form.type}
                           placeholder={form.placeholder}
-                          autoComplete="off"
+                          autoComplete={
+                            form.name === "email" || form.name === "name"
+                              ? form.name
+                              : "off"
+                          }
                         />
                         {Boolean(meta.touched && meta.error) && (
-                          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
+                          <span
+                            id={form.name + "-error"}
+                            className="field-error"
+                          >
                             {meta.error}
                           </span>
                         )}
@@ -113,10 +126,19 @@ export default function ContactForm({
                         <CustomTextarea
                           id={form.name}
                           {...field}
+                          aria-invalid={Boolean(meta.touched && meta.error)}
+                          aria-describedby={
+                            meta.touched && meta.error
+                              ? form.name + "-error"
+                              : undefined
+                          }
                           placeholder={form.placeholder}
                         />
                         {Boolean(meta.touched && meta.error) && (
-                          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-red-400 md:text-sm">
+                          <span
+                            id={form.name + "-error"}
+                            className="field-error"
+                          >
                             {meta.error}
                           </span>
                         )}
@@ -128,9 +150,8 @@ export default function ContactForm({
             </div>
           ))}
           <button
-            aria-label="send email"
             type="submit"
-            className="mt-4 w-full rounded-full bg-background px-4 py-3 text-center text-lg font-semibold text-accent transition-colors duration-150 hover:bg-background/90 disabled:cursor-not-allowed disabled:bg-background/80"
+            className="button primary mt-4"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

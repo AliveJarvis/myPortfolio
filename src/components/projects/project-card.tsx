@@ -1,8 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
-
+import { ExternalLink } from "lucide-react";
 import Corosel from "@/components/utility/corosel";
 import { GithubIcon } from "@/components/icons";
 
@@ -14,56 +11,39 @@ export interface ProjectCardProps {
   sourceCodeHref: string;
   liveWebsiteHref?: string;
 }
-
 export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <motion.div
-      initial={{ y: 80 }}
-      whileInView={{ y: 0 }}
-      transition={{
-        type: "spring",
-        duration: 0.4,
-      }}
-      className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
-    >
-      <Corosel images={props.imageUrl} aspectRatio={2.1} />
-      <div className="p-3 text-foreground sm:p-4">
-        <div className="flex items-center gap-3">
-          <span className="relative h-5 w-5">
-            <Image src={props.favicon} alt="logo" fill />
-          </span>
-          <span className="text-sm font-semibold">{props.name}</span>
-        </div>
-        <div className="mt-3">
-          <p className="text-xs md:text-sm">
-            {props.description.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </p>
-        </div>
-
-        <div className="mt-6 flex items-center justify-end gap-6">
+    <article className="project-card">
+      <Corosel images={props.imageUrl} name={props.name} />
+      <div className="card-body">
+        <h2>
+          <Image src={props.favicon} alt="" width={22} height={22} />
+          {props.name}
+        </h2>
+        <p>{props.description}</p>
+        <div className="card-actions">
           <a
+            className="button secondary"
             href={props.sourceCodeHref}
             target="_blank"
-            className="flex items-center gap-1 text-xs underline md:text-sm"
+            rel="noreferrer"
           >
-            <GithubIcon className="h-5 w-5" /> Source code
+            <GithubIcon className="h-4 w-4" />
+            Source code
           </a>
           {props.liveWebsiteHref && (
             <a
+              className="button secondary"
               href={props.liveWebsiteHref}
               target="_blank"
-              className="flex items-center gap-1 text-xs underline md:text-sm"
+              rel="noreferrer"
             >
-              <FiExternalLink className="h-5 w-5" /> Live
+              <ExternalLink size={15} />
+              Live
             </a>
           )}
         </div>
       </div>
-    </motion.div>
+    </article>
   );
 }

@@ -6,12 +6,17 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const nextConfig = withBundleAnalyzer({
   output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
   reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_CONTACT_FORM_ENABLED: String(
+      Boolean(process.env.NODEMAILER_USER && process.env.NODEMAILER_PASS),
+    ),
+  },
   pageExtensions: ["ts", "tsx", "js"],
   eslint: {
     dirs: ["src"],
   },
   images: {
-    domains: ["https://flagcdn.com"],
+    domains: ["flagcdn.com"],
   },
   webpack: (config) => {
     config.module.rules.push({

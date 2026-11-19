@@ -30,7 +30,9 @@ export default function CustomToast({
   }
 
   return createPortal(
-    <div className={className}>{children}</div>,
+    <div role="status" className={className}>
+      {children}
+    </div>,
     document.body,
   );
 }

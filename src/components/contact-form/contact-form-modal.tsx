@@ -66,7 +66,7 @@ export default function ContactFormModal({
       <Transition show={showModal} as={Fragment}>
         <Dialog
           as="div"
-          className="z-[999999]"
+          className="fixed inset-0 z-[100]"
           onClose={() => setShowModal(false)}
         >
           <Transition.Child
@@ -78,29 +78,30 @@ export default function ContactFormModal({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-zinc-600/30 backdrop-blur-md" />
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-md" />
           </Transition.Child>
           <div className="fixed inset-0 z-[9999] flex items-center justify-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
-              enterFrom="opacity-0 top-full"
-              enterTo="opacity-100 top-16"
+              enterFrom="opacity-0 translate-y-2"
+              enterTo="opacity-100 translate-y-0"
               leave="ease-in duration-200"
-              leaveFrom="opacity-100 top-16"
-              leaveTo="opacity-0 top-full"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-2"
             >
-              <Dialog.Panel className="absolute m-4 w-[95%] max-w-xl overflow-y-auto rounded-2xl border-2 border-accent/20 bg-accent px-6 py-8 shadow-lg shadow-accent/10 md:px-10 md:py-16">
+              <Dialog.Panel className="contact-panel">
                 <div className="flex items-center justify-between">
-                  <Dialog.Title className="flex items-center gap-1 text-2xl font-semibold text-background sm:gap-2 md:text-4xl">
-                    <MailIcon className="h-8 w-8 sm:h-10 sm:w-10" />
+                  <Dialog.Title className="form-title">
+                    <MailIcon size={22} />
                     <span>Send Message</span>
                   </Dialog.Title>
                   <button
-                    className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-accent bg-background p-2 text-sm text-accent transition-transform hover:scale-[1.05] hover:bg-background"
+                    aria-label="Close contact form"
+                    className="icon-button"
                     onClick={() => setShowModal(false)}
                   >
-                    <XIcon className="h-full w-full text-accent" />
+                    <XIcon size={20} />
                   </button>
                 </div>
                 <ContactForm

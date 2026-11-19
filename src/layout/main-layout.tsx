@@ -1,28 +1,24 @@
 import { ReactNode } from "react";
-
-import { Montserrat } from "next/font/google";
+import { useRouter } from "next/router";
 
 import Navbar from "@/layout/navbar";
+import CursorTrail from "@/components/cursor-trail";
 import Footer from "@/layout/footer";
 import { routes } from "@/data/navigationRoutes";
-import { classNames } from "@/utility/classNames";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-});
-
-export interface MainLayoutProps {
-  children: ReactNode;
-}
-
-export default function MainLayout(props: MainLayoutProps) {
+export default function MainLayout({ children }: { children: ReactNode }) {
+  const router = useRouter();
   return (
     <>
-      <div className={classNames("min-h-screen", montserrat.className)}>
-        <Navbar routes={routes} />
-        <main>{props.children}</main>
-      </div>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <Navbar routes={routes} />
+      <main id="main" tabIndex={-1} key={router.pathname}>
+        {children}
+      </main>
       <Footer />
+      <CursorTrail />
     </>
   );
 }
