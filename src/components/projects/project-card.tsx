@@ -1,3 +1,4 @@
+import { sectionId } from "@/components/section-nav";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import Corosel from "@/components/utility/corosel";
@@ -13,7 +14,7 @@ export interface ProjectCardProps {
 }
 export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <article className="project-card">
+    <article id={sectionId(props.name)} className="project-card">
       <Corosel images={props.imageUrl} name={props.name} />
       <div className="card-body">
         <h2>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Mail, Menu } from "lucide-react";
 import ThemeSwitch from "@/components/utility/theme-switch";
 import AnimatedLogo from "@/animation/animated-logo";
 import MobileMenu from "@/components/utility/mobile-menu";
@@ -48,6 +48,10 @@ export default function Navbar({ routes }: NavbarProps) {
           ))}
         </nav>
         <div className="nav-tools">
+          <a href="#contact" className="contact-shortcut" data-pointer>
+            <Mail size={16} aria-hidden="true" />
+            <span>Contact</span>
+          </a>
           <ThemeSwitch />
           <button
             type="button"

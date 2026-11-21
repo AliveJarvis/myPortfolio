@@ -1,3 +1,4 @@
+import SectionNav from "@/components/section-nav";
 import Head from "next/head";
 
 import { NextSeo } from "next-seo";
@@ -50,6 +51,9 @@ export default function Home() {
         )}
       </Head>
       <LandingHero />
+      <div className="shell">
+        <SectionNav titles={["My projects", "Skills", "Contact"]} />
+      </div>
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
       <SkillsShowcase skills={SKILLS_DATA} />
     </>

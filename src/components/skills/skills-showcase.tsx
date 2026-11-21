@@ -5,7 +5,7 @@ export interface SkillsShowcaseProps {
 }
 export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
   return (
-    <section className="shell section-block">
+    <section id="skills" className="shell section-block skills-section">
       <h2 className="section-title">Skills</h2>
       <div className="skill-grid">
         {skills.map((section) => (

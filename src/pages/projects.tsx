@@ -1,3 +1,4 @@
+import SectionNav from "@/components/section-nav";
 import { NextSeo } from "next-seo";
 
 import ProjectCard from "@/components/projects/project-card";
@@ -41,6 +42,7 @@ export default function Projects() {
           <h1>Projects</h1>
           <p>Here are some of the projects I&apos;d like to share</p>
         </div>
+        <SectionNav titles={PROJECTS_CARD.map((project) => project.name)} />
         <div className="project-grid">
           {PROJECTS_CARD.map((card) => (
             <ProjectCard key={card.name} {...card} />

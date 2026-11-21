@@ -13,7 +13,12 @@ export default function LandingHero() {
           <div className="hero-heading">
             <p className="role section-label">Full Stack Web Developer</p>
             <h1>
-              Arjun <span>Kumar</span>
+              <span className="name-mask">
+                <span>Arjun</span>
+              </span>{" "}
+              <span className="name-mask surname">
+                <span>Kumar</span>
+              </span>
             </h1>
           </div>
           <p className="intro">
@@ -28,9 +33,9 @@ export default function LandingHero() {
             {"(can adapt any css libraries in minutes)"}
           </p>
           <div className="hero-actions">
-            <Link href="/about" className="button primary">
+            <Link href="/about" className="button primary" data-pointer>
               <BriefcaseBusiness size={16} />
-              Check my experience
+              <span>Check my experience</span>
             </Link>
             <a
               lang="ja"
@@ -42,17 +47,23 @@ export default function LandingHero() {
             </a>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-portrait">
-            <Image
-              src={portrait}
-              alt="Arjun Kumar"
-              priority
-              fill
-              sizes="(min-width: 1400px) 524px, (min-width: 701px) 42vw, 91vw"
-            />
-            <div className="portrait-signature" aria-hidden="true">
-              <AnimatedLogo />
+        <div className="hero-visual" data-pointer>
+          <div className="portrait-stage">
+            <div className="lens-rings" aria-hidden="true">
+              <i />
+              <i />
+            </div>
+            <div className="hero-portrait">
+              <Image
+                src={portrait}
+                alt="Arjun Kumar"
+                priority
+                fill
+                sizes="(min-width: 1400px) 524px, (min-width: 701px) 42vw, 91vw"
+              />
+              <div className="portrait-signature" aria-hidden="true">
+                <AnimatedLogo />
+              </div>
             </div>
           </div>
           <div className="art-caption">

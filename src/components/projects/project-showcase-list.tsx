@@ -33,7 +33,7 @@ export default function ProjectShowcaseList({
           width={480}
           height={240}
           alt=""
-          sizes="(max-width:700px) 91vw, 1px"
+          sizes="(max-width:700px) 91vw, (hover:none) 30vw, 1px"
         />
       </div>
       <div className="work-description">

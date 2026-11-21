@@ -17,7 +17,7 @@ export default function ExperienceShowcaseList({
   details: ExperienceShowcaseListItemProps[];
 }) {
   return (
-    <section className="shell section-block timeline">
+    <section id={title.toLowerCase()} className="shell section-block timeline">
       <h2 className="section-title">{title}</h2>
       <ol>
         {details.map((entry) => {

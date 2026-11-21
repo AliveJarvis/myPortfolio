@@ -1,3 +1,4 @@
+import SectionNav from "@/components/section-nav";
 import { NextSeo } from "next-seo";
 
 import AboutHero from "@/components/about-hero";
@@ -39,6 +40,9 @@ export default function About() {
         ]}
       />
       <AboutHero />
+      <div className="shell">
+        <SectionNav titles={["Experience", "Education", "Contact"]} />
+      </div>
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />
     </>

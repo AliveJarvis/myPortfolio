@@ -7,7 +7,7 @@ import Whatsapp from "@/public/icons/whatsapp-128-svgrepo-com.svg";
 
 export default function Footer() {
   return (
-    <footer className="shell site-footer">
+    <footer id="contact" tabIndex={-1} className="shell site-footer">
       <div className="contact-strip">
         <div>
           <h2 className="section-title">Contact</h2>
@@ -18,16 +18,19 @@ export default function Footer() {
               rel="noreferrer"
               aria-label={`Email ${siteMetadata.email}`}
             >
-              <Mail />
+              <Mail aria-hidden="true" focusable="false" />
+              <span>Email</span>
             </a>
             <a href="tel:+91-6395100366" aria-label="Call +91-6395100366">
-              <CallIcon />
+              <CallIcon aria-hidden="true" focusable="false" />
+              <span>Call</span>
             </a>
             <a
               href="https://wa.me/916395100366"
               aria-label="Contact on WhatsApp"
             >
-              <Whatsapp />
+              <Whatsapp aria-hidden="true" focusable="false" />
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>
