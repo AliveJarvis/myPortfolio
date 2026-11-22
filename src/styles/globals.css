@@ -1214,7 +1214,7 @@ html {
 .hero {
   isolation: isolate;
   background: radial-gradient(
-      ellipse at 82% 48%,
+      ellipse at var(--portrait-light-x, 50%) 48%,
       hsl(var(--accent) / 0.17),
       transparent 55%
     ),
@@ -1232,12 +1232,24 @@ html {
     ),
     linear-gradient(90deg, hsl(var(--accent) / 0.09) 1px, transparent 1px);
   background-size: 4rem 4rem;
-  mask-image: linear-gradient(110deg, transparent 15%, #000 95%);
+  mask-image: linear-gradient(70deg, #000 5%, transparent 85%);
 }
 .hero-grid {
-  grid-template-columns: 1.06fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
   gap: clamp(2rem, 4vw, 5rem);
   padding-block: clamp(2.9rem, 5.3vw, 5.5rem);
+}
+@media (min-width: 701px) {
+  .hero {
+    --portrait-light-x: 25%;
+  }
+  .hero-visual {
+    grid-area: 1 / 1;
+  }
+  .hero-copy {
+    grid-area: 1 / 2;
+    min-width: 0;
+  }
 }
 .hero h1 {
   font-size: clamp(5rem, 8.6vw, 8.7rem);

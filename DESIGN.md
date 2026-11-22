@@ -24,7 +24,7 @@ Local variable Inter sets navigation, headings, and prose. The italic serif surn
 
 ## Page composition
 
-- **Home** introduces Arjun, presents the interactive work index, then the grouped skills. Each touch layout includes its project screenshot directly in the link.
+- **Home** places the right-facing portrait on the left so Arjun looks toward his introduction. On phones the name leads, followed by the portrait and introduction. The interactive work index comes next, then the grouped skills. Each touch layout includes its project screenshot directly in the link.
 - **Projects** opens with a linked index of the six existing projects. A screenshot gallery sits beside each description and follows longer text within the article. On narrow screens the image and controls precede the description.
 - **About** pairs the portrait with the introduction, then follows the experience and education timelines. Certificates remain alongside the entries they document.
 - **Contact** is reachable from the sticky header on every page. Email, Call, and WhatsApp have visible labels and theme-colored icons. Send Message follows the existing credential gate.
